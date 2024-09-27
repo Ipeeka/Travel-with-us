@@ -3,26 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Navbar & Sidebar</title>
+    <title>Travel Agency</title>
     <link rel="stylesheet" href="app.component.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
         <div class="icon-bar">
-            <a class="active" routerLink=""><i class="fa fa-home"></i></a> 
-            <a href="#"><i class="fa fa-list"></i></a> 
-            <a href="#"><i class="fa fa-search"></i></a> 
-            <a href="#" ><i class="fa fa-book"></i></a>
-            <a routerLink="login"><i class="fa fa-user"></i></a>
-            <!-- <div class="dropdown">
-                <a routerLink="login"><i class="fa fa-user"></i></a>
-                <div class="dropdown-content">
-                    <a class="ddd" routerLink="login">Profile</a>
-                    <a href="#">Settings</a>
-                    <a href="#">Logout</a>
-                </div>
-            </div> -->
+            <a class="active" routerLink="">
+                <i class="fa fa-home"></i>
+                <span>Home</span>
+            </a> 
+            <a href="#">
+                <i class="fa fa-list"></i>
+                <span>List</span>
+            </a> 
+            <a href="#">
+                <i class="fa fa-search"></i>
+                <span>Search</span>
+            </a> 
+            <a href="#">
+                <i class="fa fa-book"></i>
+                <span>Books</span>
+            </a>
+            <a routerLink="login">
+                <i class="fa fa-user"></i>
+                <span>Login</span>
+            </a>
         </div>
     </header>
 
@@ -30,24 +37,31 @@
         <aside class="sidebar">
             <nav>
                 <ul>
-                    
                     <li><a routerLink="booking">Book Now</a></li>
                     <li><a href="/employee">Gallery</a></li>
-                    <li><a routerLink="guides" >Travel Guides</a></li>
+                    <li><a routerLink="guides">Travel Guides</a></li>
                     <li><a href="/student">Customer Support</a></li>
                     <li><a href="/student">Help</a></li>
                     <li><a routerLink="ratings">Our Ratings</a></li>
                 </ul>
             </nav>
         </aside>
+        
  
         <section class="content">
-          <router-outlet></router-outlet>
+            <router-outlet></router-outlet>
         </section>
- 
- 
-        <!-- <aside class="sidebar">
-      </aside> -->
     </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Travel Agency. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

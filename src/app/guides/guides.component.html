@@ -1,54 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="guides.component.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Meet The Team</title>
+   
 </head>
 <body>
 
 <h2>Meet The Team</h2>
 
-<br>
-
-<div class="row">
-    <div class="column">
-        <div class="card">
-            <img src="https://via.placeholder.com/300" alt="Jane" style="width:100%">
-            <div class="container">
-                <h2>Jane Doe</h2>
-                <p class="title">CEO & Founder</p>
-                <p>Some text that describes me lorem ipsum.</p>
-                <p><button class="button">Contact</button></p>
+<div class="carousel">
+    <div class="row" id="teamRow">
+        <div class="column">
+            <div class="card">
+                <img src="https://via.placeholder.com/250" alt="Jane" class="team-img">
+                <div class="container">
+                    <h2>Jane Doe</h2>
+                    <p class="title">CEO & Founder</p>
+                    <p>Some text that describes me lorem ipsum.</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="column">
-        <div class="card">
-            <img src="https://via.placeholder.com/300" alt="Mike" style="width:100%">
-            <div class="container">
-                <h2>Mike Ross</h2>
-                <p class="title">Art Director</p>
-                <p>Some text that describes me lorem ipsum.</p>
-                <p><button class="button">Contact</button></p>
+        <div class="column">
+            <div class="card">
+                <img src="https://via.placeholder.com/250" alt="Mike" class="team-img">
+                <div class="container">
+                    <h2>Mike Ross</h2>
+                    <p class="title">Art Director</p>
+                    <p>Some text that describes me lorem ipsum.</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
             </div>
         </div>
-    </div>
-    
-    <div class="column">
-        <div class="card">
-            <img src="https://via.placeholder.com/300" alt="John" style="width:100%">
-            <div class="container">
-                <h2>John Doe</h2>
-                <p class="title">Designer</p>
-                <p>Some text that describes me lorem ipsum.</p>
-                <p><button class="button">Contact</button></p>
+        
+        <div class="column">
+            <div class="card">
+                <img src="https://via.placeholder.com/250" alt="John" class="team-img">
+                <div class="container">
+                    <h2>John Doe</h2>
+                    <p class="title">Designer</p>
+                    <p>Some text that describes me lorem ipsum.</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="column">
+            <div class="card">
+                <img src="https://via.placeholder.com/250" alt="Alice" class="team-img">
+                <div class="container">
+                    <h2>Alice Smith</h2>
+                    <p class="title">Marketing Manager</p>
+                    <p>Some text that describes me lorem ipsum.</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="https://via.placeholder.com/250" alt="Bob" class="team-img">
+                <div class="container">
+                    <h2>Bob Johnson</h2>
+                    <p class="title">Lead Developer</p>
+                    <p>Some text that describes me lorem ipsum.</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="column">
+            <div class="card">
+                <img src="https://via.placeholder.com/250" alt="Eve" class="team-img">
+                <div class="container">
+                    <h2>Eve Davis</h2>
+                    <p class="title">UX/UI Designer</p>
+                    <p>Some text that describes me lorem ipsum.</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<div class="controls">
+    <button class="prev" onclick="moveSlide(-1)">&#10094; Prev</button>
+    <button class="next" onclick="moveSlide(1)">Next &#10095;</button>
+</div>
+
+<script>
+let currentSlide = 0;
+
+function moveSlide(direction) {
+    const slidesToShow = 3; // Number of slides to show
+    const totalSlides = document.querySelectorAll('.column').length;
+
+    // Update current slide index
+    currentSlide += direction;
+    if (currentSlide < 0) currentSlide = 0; // Prevent going back past first slide
+    if (currentSlide >= totalSlides - slidesToShow + 1) currentSlide = totalSlides - slidesToShow; // Prevent going past last slide
+
+    // Calculate the translateX value
+    const translateX = -((currentSlide * (100 / slidesToShow)));
+    document.getElementById('teamRow').style.transform = `translateX(${translateX}%)`;
+}
+
+// Initialize slide position
+moveSlide(0);
+</script>
 
 </body>
 </html>

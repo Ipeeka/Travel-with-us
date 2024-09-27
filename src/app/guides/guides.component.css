@@ -1,59 +1,94 @@
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
     margin: 0;
-    padding: 10px; /* Reduced padding */
+    padding: 15px; /* Reduced padding */
+    overflow: hidden; /* Prevent scrollbar */
 }
 
 h2 {
     text-align: center;
+    margin-bottom: 15px; /* Reduced margin */
+    font-size: 24px; /* Adjusted font size */
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin: auto;
 }
 
 .row {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    transition: transform 0.5s ease; /* Smooth transition */
 }
 
 .column {
-    flex: 16.67%; /* Change from 33.33% to 16.67% for 6 columns */
-    padding: 2.5px; /* Reduced padding */
+    flex: 0 0 250px; /* Reduced width */
+    margin: 5px; /* Reduced margin */
+    max-width: 250px; /* Limit column width */
 }
 
 .card {
-    background-color: #f9f9f9;
+    background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px; /* Reduced border radius */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
     text-align: center;
-    margin: 5px; /* Reduced margin */
+    transition: transform 0.2s, box-shadow 0.2s;
+    padding: 10px; /* Added padding */
+}
+
+.card:hover {
+    transform: scale(1.03); /* Reduced hover scale */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.team-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Added rounded corners */
 }
 
 .container {
-    padding: 8px; /* Reduced padding */
-}
-
-img {
-    border-radius: 5px 5px 0 0;
-    max-width: 100%; /* Ensure images don't exceed their container */
-    height: auto; /* Maintain aspect ratio */
-}
-
-/* Responsive styling */
-@media screen and (max-width: 600px) {
-    .column {
-        flex: 100%; /* Stack columns on small screens */
-    }
+    padding: 10px; /* Reduced padding */
 }
 
 .button {
     background-color: #007BFF;
     color: white;
-    padding: 5px 10px; /* Reduced button padding */
+    padding: 8px 12px; /* Reduced padding */
     border: none;
-    border-radius: 5px;
+    border-radius: 4px; /* Reduced border radius */
     cursor: pointer;
+    margin: 5px 0;
+    font-size: 14px; /* Adjusted font size */
 }
 
 .button:hover {
+    background-color: #0056b3;
+}
+
+.controls {
+    text-align: center;
+    margin-top: 15px; /* Reduced margin */
+}
+
+.prev, .next {
+    cursor: pointer;
+    padding: 8px; /* Reduced padding */
+    margin: 0 5px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px; /* Reduced border radius */
+    font-size: 14px; /* Adjusted font size */
+}
+
+.prev:hover, .next:hover {
     background-color: #0056b3;
 }
