@@ -43,24 +43,6 @@ header {
   margin-top: 3px; /* Reduced space between icon and text */
 }
 
-/* Responsive styling for header */
-@media screen and (max-width: 768px) {
-  header {
-      padding: 5px 0; /* Further reduce padding on mobile */
-      font-size: 1em; /* Smaller font size on mobile */
-  }
-
-  .icon-bar a i {
-      font-size: 18px; /* Smaller icon size on mobile */
-  }
-
-  .icon-bar a span {
-      font-size: 9px; /* Smaller text size on mobile */
-  }
-}
-
-
-
 .main-container {
   display: flex;
   flex: 1; /* Allow the content to expand */
@@ -97,18 +79,12 @@ header {
   color: white; /* Change text color on hover */
 }
 
-
-/* Other existing styles remain unchanged */
-
 .content {
   flex: 1; /* Allow the content to take the remaining space */
   padding: 20px;
   overflow-y: auto; /* Enable vertical scrollbar when needed */
   max-height: calc(100vh - 150px); /* Adjust this value based on header and footer height */
 }
-
-
-/* Existing styles remain unchanged */
 
 footer {
   background-color: #333;
@@ -143,16 +119,5 @@ footer {
       width: 100%; /* Full width for mobile */
       padding: 10px;
   }
-
-  footer {
-      padding: 5px 0; /* Further reduce padding on mobile */
-  }
-
-  .footer-content {
-      font-size: 0.8em; /* Smaller font size on mobile */
-  }
-
-  .social-links a {
-      font-size: 16px; /* Smaller icon size on mobile */
-  }
 }
+
