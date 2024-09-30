@@ -3,59 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Carousel</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .carousel-container {
-            max-width: 800px; /* Set your desired width */
-            margin: auto; /* Center the carousel */
-        }
-        .carousel-item {
-            height: 40vh; /* Height of the carousel */
-            min-height: 200px; /* Minimum height */
-        }
-        video {
-            width: 100%;
-            height: auto;
-            object-fit: cover; /* Ensure the video covers the area */
-        }
-    </style>
+    <title>Travel Tour - Camper</title>
+    <link rel="stylesheet" href="home.component.css"> <!-- Link to your CSS file -->
 </head>
 <body>
-    <div class="carousel-container">
-        <div id="videoCarousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-                        <source src="https://cdn.coverr.co/videos/coverr-cinematic-snowy-mountains-7615/720p.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="carousel-item active">
-                    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-                        <source src="https://cdn.coverr.co/videos/coverr-cinematic-snowy-mountains-7615/720p.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="carousel-item">
-                    <video autoplay loop controls>
-                        <source src="video3.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#videoCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#videoCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div>
+    <header>
+        <div class="logo">Your Travel Agency</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tours">Tours</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <section id="hero">
+        <h1>Explore the World with Us</h1>
+        <p>Join us for unforgettable adventures and discover amazing destinations.</p>
+        <a href="#tours" class="btn">View Tours</a>
+    </section>
+
+    <section id="tours">
+        <h2>Featured Tours</h2>
+        <div class="tour-list">
+            <article class="tour-item">
+                <img src="images/tour1.jpg" alt="Tour 1">
+                <h3>Bali Getaway</h3>
+                <p>Experience the stunning beaches and vibrant culture of Bali.</p>
+                <a href="#" class="btn">Book Now</a>
+            </article>
+            <article class="tour-item">
+                <img src="images/tour2.jpg" alt="Tour 2">
+                <h3>European Adventure</h3>
+                <p>Explore the historic cities and breathtaking landscapes of Europe.</p>
+                <a href="#" class="btn">Book Now</a>
+            </article>
+            <article class="tour-item">
+                <img src="images/tour3.jpg" alt="Tour 3">
+                <h3>Safari Experience</h3>
+                <p>Embark on an unforgettable safari adventure in Africa.</p>
+                <a href="#" class="btn">Book Now</a>
+            </article>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are passionate about travel and committed to providing unforgettable experiences. Our team of experts is here to help you plan the perfect trip.</p>
+    </section>
+
+    <section id="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-list">
+            <blockquote>
+                <p>“The trip to Bali was incredible! Everything was well organized, and the guides were fantastic.”</p>
+                <footer>- Emily R.</footer>
+            </blockquote>
+            <blockquote>
+                <p>“Our European adventure was a dream come true. I can't wait for our next trip!”</p>
+                <footer>- Michael T.</footer>
+            </blockquote>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Travel Agency. All Rights Reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#terms">Terms of Service</a></li>
+            </ul>
+        </nav>
+    </footer>
 </body>
 </html>

@@ -17,6 +17,11 @@ header {
   padding: 10px 0; /* Reduced padding */
   text-align: center;
   font-size: 1.2em; /* Slightly smaller font size */
+  position: fixed; /* Fix the header to the top */
+  top: 0; /* Stick to the very top */
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensure it stays above other content */
 }
 
 .icon-bar {
@@ -24,6 +29,11 @@ header {
   justify-content: space-around; /* Distribute space evenly */
   background-color: #333; /* Background color */
   padding: 5px 0; /* Reduced padding for the icon bar */
+  position: fixed; /* Fix the icon bar to the top */
+  top: 0px; /* Position it directly below the header */
+  left: 0;
+  right: 0;
+  z-index: 999; /* Ensure it stays above other content */
 }
 
 .icon-bar a {
@@ -46,13 +56,18 @@ header {
 .main-container {
   display: flex;
   flex: 1; /* Allow the content to expand */
+  margin-top: 40px; /* Adjust based on header and icon bar height */
 }
 
 .sidebar {
+  position: fixed; /* Fix the sidebar */
+  top: 50px; /* Position it below the icon bar */
+  bottom: 40px; /* Position it above the footer */
   width: 250px; /* Fixed width for sidebar */
   background-color: #f4f4f4;
   padding: 20px;
   border-right: 1px solid #ddd; /* Optional: add a border */
+  overflow-y: auto; /* Enable scrolling if content overflows */
 }
 
 .sidebar ul {
@@ -82,20 +97,25 @@ header {
 .content {
   flex: 1; /* Allow the content to take the remaining space */
   padding: 20px;
+  margin-left: 250px; /* Leave space for the sidebar */
   overflow-y: auto; /* Enable vertical scrollbar when needed */
-  max-height: calc(100vh - 150px); /* Adjust this value based on header and footer height */
+  max-height: calc(100vh - 150px); /* Adjust this value based on header, icon bar, and footer height */
 }
 
 footer {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 10px 0; /* Reduced padding */
+  padding: 6px 0; /* Reduced padding */
+  position: fixed; /* Fix the footer to the bottom */
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .footer-content {
   margin: 0 auto;
-  font-size: 0.9em; /* Slightly smaller font size */
+  font-size: 0.8em; /* Slightly smaller font size */
 }
 
 .social-links {
@@ -106,7 +126,7 @@ footer {
   color: white;
   margin: 0 5px; /* Reduced margin for social icons */
   text-decoration: none;
-  font-size: 18px; /* Slightly smaller icon size */
+  font-size: 16px; /* Slightly smaller icon size */
 }
 
 .social-links a:hover {
@@ -116,8 +136,13 @@ footer {
 /* Responsive styling */
 @media screen and (max-width: 768px) {
   .sidebar {
-      width: 100%; /* Full width for mobile */
-      padding: 10px;
+    position: relative; /* Allow it to be part of flow on mobile */
+    width: 100%; /* Full width for mobile */
+    padding: 10px;
+    top: 0; /* Reset top position */
+    bottom: auto; /* Reset bottom position */
+  }
+  footer {
+    padding: 8px 0; /* Slightly increase footer padding on mobile */
   }
 }
-

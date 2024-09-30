@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Tours - Your Travel Agency</title>
+    <link rel="stylesheet" href="exploredestinations.component.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+    <div class="container" id="search-tours">
+        <div class="row">
+            <div class="col-md-3">
+                <h1>Find Your Perfect Tour</h1>
+                <div class="tourmaster-tour-search-item-wrap">
+                    <form class="tourmaster-form-field tourmaster-with-border" action="#" method="GET">
+                        <div class="tourmaster-tour-search-field tourmaster-tour-search-field-keywords">
+                            <label>Keywords</label>
+                            <input name="tour-search" type="text" placeholder="Enter keywords..." />
+                        </div>
+                        <div class="tourmaster-type-filter-item">
+                            <h5>Category</h5>
+                            <label>
+                                <input type="checkbox" name="tax-tour_category[]" value="popular-tour" />
+                                Popular Tour
+                            </label>
+                        </div>
+                        <div class="tourmaster-tour-search-field tourmaster-tour-search-field-duration">
+                            <label>Duration</label>
+                            <select name="duration">
+                                <option value="">Any</option>
+                                <option value="1">1 Day Tour</option>
+                                <option value="2">2-4 Days Tour</option>
+                                <option value="5">5-7 Days Tour</option>
+                                <option value="7">7+ Days Tour</option>
+                            </select>
+                        </div>
+                        <div class="tourmaster-tour-search-field tourmaster-tour-search-field-date">
+                            <label>Date</label>
+                            <input class="tourmaster-datepicker" type="text" placeholder="Select date" />
+                        </div>
+                        <div class="tourmaster-tour-search-field tourmaster-tour-search-field-min-price">
+                            <label>Min Price</label>
+                            <input name="min-price" type="text" placeholder="0" />
+                        </div>
+                        <div class="tourmaster-tour-search-field tourmaster-tour-search-field-max-price">
+                            <label>Max Price</label>
+                            <input name="max-price" type="text" placeholder="1000" />
+                        </div>
+                        <div class="tourmaster-tour-search-field tourmaster-tour-search-field-rating clearfix">
+                            <label>Rating</label>
+                            <span class="tourmaster-rating-select" data-rating-score="0"></span>
+                            <input type="hidden" name="rating" value="0" />
+                            <span>or more</span>
+                        </div>
+                        <a class="tourmaster-tour-search-filter-clear" href="#">× Clear Filter</a>
+                        <div class="tourmaster-tour-search-item-divider"></div>
+                        <div class="tourmaster-tour-search-type-filter">
+                            <h3>Type Filter</h3>
+                            <div class="tourmaster-type-filter-item-wrap tourmaster-active">
+                                <h5>Activity</h5>
+                                <label>
+                                    <input type="checkbox" name="tax-tour-activity[]" value="backpacking-trips" />
+                                    Backpacking Trips
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="tax-tour-activity[]" value="basecamp-tours" />
+                                    Basecamp Tours
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="tax-tour-activity[]" value="family-camping" />
+                                    Family Camping
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="tax-tour-activity[]" value="glamping" />
+                                    Glamping
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="tax-tour-activity[]" value="trekking" />
+                                    Trekking
+                                </label>
+                            </div>
+                        </div>
+                        <input class="tourmaster-tour-search-submit" type="submit" value="Search" />
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-8" id="tour-results">
+                <h1>18 Results</h1>
+                
+                <div class="tour-list" id="tour-list">
+                    <article class="tour-item">
+                        <img src="images/tour1.jpg" alt="Bali Adventure" />
+                        <h3>Bali Adventure</h3>
+                        <p>Duration: 5 Days</p>
+                        <p>Price: $499</p>
+                        <p>Discover the beauty of Bali's beaches and culture.</p>
+                        <a href="#" class="btn">Book Now</a>
+                    </article>
+                    <article class="tour-item">
+                        <img src="images/tour2.jpg" alt="European Escape" />
+                        <h3>European Escape</h3>
+                        <p>Duration: 10 Days</p>
+                        <p>Price: $1,199</p>
+                        <p>Explore iconic cities and breathtaking landscapes across Europe.</p>
+                        <a href="#" class="btn">Book Now</a>
+                    </article>
+                    <article class="tour-item">
+                        <img src="images/tour3.jpg" alt="Safari Experience" />
+                        <h3>Safari Experience</h3>
+                        <p>Duration: 7 Days</p>
+                        <p>Price: $899</p>
+                        <p>Experience the thrill of an African safari adventure.</p>
+                        <a href="#" class="btn">Book Now</a>
+                    </article>
+                    <article class="tour-item">
+                        <img src="images/tour4.jpg" alt="Tropical Paradise" />
+                        <h3>Tropical Paradise</h3>
+                        <p>Duration: 7 Days</p>
+                        <p>Price: $799</p>
+                        <p>Relax in the tropical sun and enjoy luxury.</p>
+                        <a href="#" class="btn">Book Now</a>
+                    </article>
+                </div>
+                <button id="next-button" class="btn">Next</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

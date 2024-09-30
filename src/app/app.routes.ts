@@ -10,6 +10,8 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { DestinationsComponent } from './destinations/destinations.component';
 import { ServicesComponent } from './services/services.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { ExploredestinationsComponent } from './exploredestinations/exploredestinations.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -20,8 +22,10 @@ export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'blogs', component: BlogsComponent },
-  { path: 'destinations', component: DestinationsComponent },
+  // { path: 'destinations', component: DestinationsComponent },
   { path: 'services', component: ServicesComponent },
+  { path: 'contactus', component: ContactusComponent },
+  { path: 'destinations', component: ExploredestinationsComponent },
 ];
 
 @NgModule({

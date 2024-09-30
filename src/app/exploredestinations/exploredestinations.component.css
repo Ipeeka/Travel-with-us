@@ -1,0 +1,75 @@
+.col-md-8 {
+    flex: 0 0 66.67%;
+    max-width: 66.67%;
+    padding: 15px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: 600px; /* Set a fixed height */
+    border: 1px solid #ccc; /* Optional: border for styling */
+    border-radius: 8px; /* Match rounded corners with the items */
+}
+
+/* Adjust existing styles as needed */
+.tour-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 10px; /* Optional padding for the grid */
+}
+
+.tour-item {
+    background: #fff;
+    border-radius: 10px;
+    margin: 0; /* No margin */
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.tour-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional scrollbar styling (for webkit browsers) */
+.col-md-8::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.col-md-8::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.col-md-8::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker color on hover */
+}
+
+.tour-item img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    height: auto;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .tour-item {
+        flex: 0 0 100%;
+    }
+}
+
+#next-button {
+    display: block; /* Ensure the button takes full width */
+    margin: 20px auto; /* Center the button */
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#next-button:hover {
+    background-color: #0056b3;
+}
