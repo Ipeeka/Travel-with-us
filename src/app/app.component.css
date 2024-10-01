@@ -99,7 +99,7 @@ header {
   padding: 20px;
   margin-left: 250px; /* Leave space for the sidebar */
   overflow-y: auto; /* Enable vertical scrollbar when needed */
-  max-height: calc(100vh - 150px); /* Adjust this value based on header, icon bar, and footer height */
+  max-height: calc(100vh - 1px); /* Adjust this value based on header, icon bar, and footer height */
 }
 
 footer {

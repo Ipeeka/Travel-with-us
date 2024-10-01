@@ -3,79 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Tour - Camper</title>
-    <link rel="stylesheet" href="home.component.css"> <!-- Link to your CSS file -->
+    <title>Travel Tour Camper</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Basic Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        /* Header */
+        header {
+            background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0') no-repeat center center/cover;
+            height: 60vh;
+            position: relative;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        header p {
+            font-size: 1.5rem;
+        }
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        /* Search Section */
+        .tour-search {
+            background-color: #f3f3f3;
+            border-radius: 20px;
+            box-shadow: 0 20px 35px rgba(20, 20, 20, 0.08);
+            padding: 20px;
+            margin: 20px;
+        }
+        .tour-search label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .tour-search input,
+        .tour-search select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .tour-search-submit {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        /* Main Content */
+        .container {
+            width: 90%;
+            margin: 2rem auto;
+        }
+        .services, .team, .pricing {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        .service, .team-member, .pricing-plan {
+            background: white;
+            padding: 20px;
+            margin: 10px;
+            flex: 1;
+            min-width: 280px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .service img, .team-member img {
+            width: 100%;
+            height: auto;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #333;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="logo">Your Travel Agency</div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#tours">Tours</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="hero">
-        <h1>Explore the World with Us</h1>
-        <p>Join us for unforgettable adventures and discover amazing destinations.</p>
-        <a href="#tours" class="btn">View Tours</a>
-    </section>
+<!-- Header -->
+<header>
+    <h1>Explore the World with Us</h1>
+    <p>Your adventure starts here</p>
+</header>
 
-    <section id="tours">
-        <h2>Featured Tours</h2>
-        <div class="tour-list">
-            <article class="tour-item">
-                <img src="images/tour1.jpg" alt="Tour 1">
-                <h3>Bali Getaway</h3>
-                <p>Experience the stunning beaches and vibrant culture of Bali.</p>
-                <a href="#" class="btn">Book Now</a>
-            </article>
-            <article class="tour-item">
-                <img src="images/tour2.jpg" alt="Tour 2">
-                <h3>European Adventure</h3>
-                <p>Explore the historic cities and breathtaking landscapes of Europe.</p>
-                <a href="#" class="btn">Book Now</a>
-            </article>
-            <article class="tour-item">
-                <img src="images/tour3.jpg" alt="Tour 3">
-                <h3>Safari Experience</h3>
-                <p>Embark on an unforgettable safari adventure in Africa.</p>
-                <a href="#" class="btn">Book Now</a>
-            </article>
+<!-- Navigation -->
+<nav>
+    <a href="#services">Services</a>
+    <a href="#team">Our Team</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact Us</a>
+</nav>
+
+<!-- Search Tours Section -->
+<div class="container">
+    <div class="tour-search">
+        <h2>Search Tours</h2>
+        <form action="https://demo.goodlayers.com/traveltour/homepages/camper/search-tours/" method="GET">
+            <div>
+                <label for="keywords">Keywords</label>
+                <input name="tour-search" id="keywords" type="text" placeholder="Type Your Keywords">
+            </div>
+            <div>
+                <label for="destination">Destination</label>
+                <select name="tax-tour-destination" id="destination">
+                    <option value="">Any</option>
+                    <option value="asia">Asia</option>
+                    <option value="australia">Australia</option>
+                    <option value="blue-lagoon-campgrounds">Blue Lagoon Campgrounds</option>
+                    <option value="egypt">Egypt</option>
+                    <option value="scandinavia">Scandinavia</option>
+                    <option value="south-africa">South Africa</option>
+                    <option value="united-states">United States</option>
+                    <option value="western-europe">Western Europe</option>
+                </select>
+            </div>
+            <div>
+                <label for="duration">Duration</label>
+                <select name="duration" id="duration">
+                    <option value="">Any</option>
+                    <option value="1">1 Day Tour</option>
+                    <option value="2">2-4 Days Tour</option>
+                    <option value="5">5-7 Days Tour</option>
+                    <option value="7">7+ Days Tour</option>
+                </select>
+            </div>
+            <input class="tour-search-submit" type="submit" value="Search">
+        </form>
+    </div>
+</div>
+
+<!-- Main Content -->
+<div class="container">
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="service">
+            <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" alt="Service 1">
+            <h3>Guided Tours</h3>
+            <p>Experience our curated guided tours across beautiful destinations.</p>
+        </div>
+        <div class="service">
+            <img src="https://images.unsplash.com/photo-1513709359355-5b1b64e71b56" alt="Service 2">
+            <h3>Adventure Trips</h3>
+            <p>Join us for thrilling adventures that will leave you breathless.</p>
+        </div>
+        <div class="service">
+            <img src="https://images.unsplash.com/photo-1507693492248-62e82c7e1622" alt="Service 3">
+            <h3>Luxury Packages</h3>
+            <p>Enjoy premium travel experiences tailored to your needs.</p>
         </div>
     </section>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We are passionate about travel and committed to providing unforgettable experiences. Our team of experts is here to help you plan the perfect trip.</p>
-    </section>
-
-    <section id="testimonials">
-        <h2>What Our Customers Say</h2>
-        <div class="testimonial-list">
-            <blockquote>
-                <p>“The trip to Bali was incredible! Everything was well organized, and the guides were fantastic.”</p>
-                <footer>- Emily R.</footer>
-            </blockquote>
-            <blockquote>
-                <p>“Our European adventure was a dream come true. I can't wait for our next trip!”</p>
-                <footer>- Michael T.</footer>
-            </blockquote>
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <h2>Meet Our Team</h2>
+        <div class="team-member">
+            <img src="https://images.unsplash.com/photo-1544005313-94bbd8f1c8e7" alt="Team Member 1">
+            <h3>John Doe</h3>
+            <p>Tour Coordinator</p>
+        </div>
+        <div class="team-member">
+            <img src="https://images.unsplash.com/photo-1544005313-94bbd8f1c8e7" alt="Team Member 2">
+            <h3>Jane Smith</h3>
+            <p>Travel Advisor</p>
+        </div>
+        <div class="team-member">
+            <img src="https://images.unsplash.com/photo-1544005313-94bbd8f1c8e7" alt="Team Member 3">
+            <h3>Emily Johnson</h3>
+            <p>Customer Support</p>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Your Travel Agency. All Rights Reserved.</p>
-        <nav>
-            <ul>
-                <li><a href="#privacy">Privacy Policy</a></li>
-                <li><a href="#terms">Terms of Service</a></li>
-            </ul>
-        </nav>
-    </footer>
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <h2>Pricing Plans</h2>
+        <div class="pricing-plan">
+            <h3>Basic Plan</h3>
+            <p>$50/month</p>
+            <button class="btn">Sign Up</button>
+        </div>
+        <div class="pricing-plan">
+            <h3>Pro Plan</h3>
+            <p>$100/month</p>
+            <button class="btn">Sign Up</button>
+        </div>
+        <div class="pricing-plan">
+            <h3>Premium Plan</h3>
+            <p>$200/month</p>
+            <button class="btn">Sign Up</button>
+        </div>
+    </section>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2023 Travel Agency. All rights reserved.</p>
+</footer>
+
 </body>
 </html>

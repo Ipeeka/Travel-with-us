@@ -3,10 +3,11 @@ body {
 }
 
 form {
-    border: 2px solid #f1f1f1; /* Border width */
+    border: 2px solid #979393; /* Border width */
     max-width: 350px; /* Further increased max-width for more space */
     margin: auto; /* Center the form */
     padding: 6px; /* Padding */
+    margin-top: 21px;
 }
 
 input[type="text"],
@@ -14,7 +15,7 @@ input[type="password"] {
     width: 100%;
     padding: 4px; /* Padding */
     margin: 3px 0; /* Margin */
-    border: 1px solid #ccc;
+    border: 1px solid #9f9b9b;
     box-sizing: border-box;
 }
 
@@ -40,11 +41,13 @@ button:hover {
 .imgcontainer {
     text-align: center;
     margin: 4px 0; /* Margin */
+    
 }
 
 img.avatar {
     width: 15%; /* Keeping this at 15% for a balanced look */
     border-radius: 50%; /* Circular avatar */
+    border: 2px solid #979393;
 }
 
 .container {
